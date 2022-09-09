@@ -77,6 +77,11 @@ public class StringDemo {
     System.out.println(sub);
   }
 
+  public static void isSubString() {
+    String a = "hello";
+    String b = "hell";
+  }
+
   public static void playWithCharacterList() {
     List<Character> lst = List.of('l', 'e');
     var sb = new StringBuilder();

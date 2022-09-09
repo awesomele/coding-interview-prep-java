@@ -3,8 +3,13 @@ package com.leyu.playground;
 import java.util.*;
 
 public class CommonAPIS {
-  public static int max = Integer.MAX_VALUE;
-  public static int min = Integer.MIN_VALUE;
+  public static int maxInt = Integer.MAX_VALUE;
+
+  public static int minInt = Integer.MIN_VALUE;
+  
+  public static long maxLong = Long.MAX_VALUE;
+  
+  public static double maxDouble = Double.MAX_VALUE;
 
   public static void initializeListWithLiterals() {
     // initialize a list with literals

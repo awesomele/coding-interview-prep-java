@@ -30,12 +30,19 @@ public class PriorityQueueDemo {
 //    Queue<Data> min = new PriorityQueue<Data>((a, b) -> a.distance -  b.distance);
 //    Queue<Data> max = new PriorityQueue<Data>(Comparator.comparing(Data::distance).reversed());
 
-    Queue<Data> min = new PriorityQueue<Data>(Comparator.comparing(Data::distance));
+//    Queue<Data> min = new PriorityQueue<Data>(Comparator.comparing(Data::distance));
+    Queue<Data> max = new PriorityQueue<Data>(Comparator.comparing(Data::distance).thenComparing(Data::id).reversed());
     for (int i = 0; i < 2; ++i) {
-      min.add(new Data(i, 10 - i));
+      max.add(new Data(i, 10 - i));
     }
+    max.add(new Data(1, 10));
 
-    System.out.println(min);
+    System.out.println("Print the pq: ");
+    System.out.println(max);
+    System.out.println("Pop the pq: ");
+    while (!max.isEmpty()) {
+      System.out.println(max.poll());
+    }
   }
 
 }

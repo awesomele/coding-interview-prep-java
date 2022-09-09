@@ -16,6 +16,7 @@ public class DijkstraPrototype {
   public static int getShortestPath(int n, int[][] roads) {
 
     Map<Integer, List<AdjacencyMapValue>> adjacencyMap = buildAdjacencyMapMap(roads);
+
     int src = 0;
     int dest = n-1;
     return bfs(src, dest, adjacencyMap);

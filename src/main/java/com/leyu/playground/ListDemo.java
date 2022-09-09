@@ -5,11 +5,19 @@ import java.util.stream.Collectors;
 
 public class ListDemo {
 
-  public static void arrayToList() {
+  public static void intArrayToList() {
     int[] arrays = new int[]{1,2,3};
 //    List<Integer> lst = Arrays.asList(arrays);  // <--- we need Integer[] to use Arrays.asList to convert
     List<Integer> unmodifiableList = Arrays.stream(arrays).boxed().toList();
     List<Integer> lst = Arrays.stream(arrays).boxed().collect(Collectors.toList());
+  }
+
+  public static void stringArrayToList() {
+    String[] arrays = new String[]{"hello","world"};
+    List<String> unmodifiableList = Arrays.stream(arrays).toList();
+    List<String> lst = Arrays.stream(arrays).collect(Collectors.toList());
+    System.out.println(unmodifiableList);
+    System.out.println(lst);
   }
 
   public static void referenceIsPassedByValue() {

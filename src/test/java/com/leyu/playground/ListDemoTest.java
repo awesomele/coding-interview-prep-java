@@ -9,6 +9,11 @@ public class ListDemoTest {
   }
 
   @Test
+  public void testStringArrayToList() {
+    ListDemo.stringArrayToList();
+  }
+
+  @Test
   public void testPlayList() {
     ListDemo.playList();
   }

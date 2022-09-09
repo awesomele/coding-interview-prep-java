@@ -33,4 +33,13 @@ public class ArrayDemoTest {
     ArrayDemo.playArraySortWithLambda();
   }
 
+  @Test
+  public void testArraySortWithLambda() {
+    ArrayDemo.arraySortWithLambda();
+  }
+
+  @Test
+  public void testArraySortWithComparator() {
+    ArrayDemo.arraySortWithComparator();
+  }
 }
