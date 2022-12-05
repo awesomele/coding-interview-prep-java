@@ -7,4 +7,19 @@ public class MapDemoTest {
   public void treeMap() {
     MapDemo.treeMap();
   }
+
+  @Test
+  public void higherKey() {
+    MapDemo.higherKey();
+  }
+
+  @Test
+  public void comparisonLinkedHashMapVsHashMapOnTheEntryOrdering() {
+    MapDemo.comparisonLinkedHashMapVsHashMapOnTheEntryOrdering();
+  }
+
+  @Test
+  public void removeValueFromMap() {
+    MapDemo.removeValueFromMap();
+  }
 }

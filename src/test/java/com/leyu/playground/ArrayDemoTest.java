@@ -4,6 +4,11 @@ import org.junit.jupiter.api.Test;
 
 public class ArrayDemoTest {
   @Test
+  public void testFill() {
+    ArrayDemo.fill();
+  }
+
+  @Test
   public void testIndexOf() {
     ArrayDemo.indexOf();
   }
@@ -41,5 +46,10 @@ public class ArrayDemoTest {
   @Test
   public void testArraySortWithComparator() {
     ArrayDemo.arraySortWithComparator();
+  }
+
+  @Test
+  public void testArraySortWithMethod() {
+    ArrayDemo.arraySortWithMethod();
   }
 }

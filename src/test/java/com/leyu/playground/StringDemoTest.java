@@ -15,6 +15,11 @@ public class StringDemoTest {
   }
 
   @Test
+  public void testSplit() {
+    StringDemo.split();
+  }
+
+  @Test
   public void testStringAt() {
     StringDemo.stringAt();
   }
@@ -37,6 +42,11 @@ public class StringDemoTest {
   @Test
   public void testPlayWithSubString() {
     StringDemo.playWithSubString();
+  }
+
+  @Test
+  public void playWithCharacterList() {
+    StringDemo.playWithCharacterList();
   }
 
   @Test

@@ -8,4 +8,9 @@ public class SetDemoTest {
   public void testToList() {
     SetDemo.toList();;
   }
+
+  @Test
+  public void testRemoveValueFromSet() {
+    SetDemo.removeValueFromSet();
+  }
 }

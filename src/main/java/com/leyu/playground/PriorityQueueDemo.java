@@ -19,7 +19,7 @@ public class PriorityQueueDemo {
       min.add(i);
       max.add(i);
     }
-
+    int a = max.peek();
     System.out.println(min);
     System.out.println(max);
   }

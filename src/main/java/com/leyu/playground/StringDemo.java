@@ -14,6 +14,11 @@ public class StringDemo {
 
   }
 
+  public static void trim() {
+    String s = "  dasda   ";
+    var s2 = s.trim();
+  }
+
   public static void valueOf() {
     int i = 'a';
     String a = String.valueOf((char)i);
@@ -23,6 +28,9 @@ public class StringDemo {
   public static void stringComparison() {
     String a = String.format("hello %d", 1);
     String b = String.format("hello %d", 1);
+
+    a.compareTo(b);
+
 
     boolean doubleEqualOp = a == b; // check if the reference are equal.
     System.out.println("use ==, get " + doubleEqualOp);
@@ -36,6 +44,12 @@ public class StringDemo {
       Character c = s.charAt(i);
       System.out.println(c);
     }
+  }
+
+  public static void split() {
+    String s = "hello world nice to see you";
+    var tokens = s.split(" ", 2);
+    System.out.println(Arrays.toString(tokens));
   }
 
   public static void character() {
@@ -88,9 +102,13 @@ public class StringDemo {
     for (var c : lst) {
       sb.append(c);
     }
+//    sb.setCharAt(0, 'c');
+//    sb.charAt(0);
 
-   var s = sb.toString();
-
+    var a = sb.toString();
+    var b = sb.toString();
+    System.out.println(String.format("s = %s", a));
+    System.out.println(String.format("b = %s", b));
   }
 
   public static void streamJoin() {
@@ -115,6 +133,9 @@ public class StringDemo {
     sb.deleteCharAt(0);
     System.out.println(sb.length());
     System.out.println(sb.toString());
+    sb.setLength(0);
+    sb.deleteCharAt(0);
+    sb.charAt(0);
   }
 
   public static void playIntToString() {

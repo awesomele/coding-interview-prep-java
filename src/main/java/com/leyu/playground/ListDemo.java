@@ -5,11 +5,33 @@ import java.util.stream.Collectors;
 
 public class ListDemo {
 
+  public static void listToArray() {
+    List<Integer> lst = new ArrayList<>();
+    lst.add(1);
+    lst.add(2);
+    var arr = lst.toArray(new Integer[2]);
+
+    System.out.println(Arrays.toString(arr));
+
+    List<int[]> arrlst = new ArrayList<>();
+    arrlst.add(new int[] {1,2});
+    arrlst.add(new int[] {3,4});
+
+    var arr2 = arrlst.toArray(new int[arrlst.size()][2]);
+    System.out.println(Arrays.deepToString(arr2));
+  }
+
   public static void intArrayToList() {
     int[] arrays = new int[]{1,2,3};
 //    List<Integer> lst = Arrays.asList(arrays);  // <--- we need Integer[] to use Arrays.asList to convert
     List<Integer> unmodifiableList = Arrays.stream(arrays).boxed().toList();
     List<Integer> lst = Arrays.stream(arrays).boxed().collect(Collectors.toList());
+  }
+  public static void charArrayToList() {
+    // Arrays.stream does not support char[]
+//    String s = "abcde";
+//    Character[] chars = s.toCharArray().boxed();
+//    List<Character> charLst  = Arrays.stream(chars).boxed().toList();
   }
 
   public static void stringArrayToList() {
@@ -40,6 +62,10 @@ public class ListDemo {
     lst.add(3);
     lst.add(4);
     lst.removeLast();
+    lst.addFirst(1);
+    lst.removeFirst();
+
+    lst.add(2,99);
   }
 
   public static void playList() {
@@ -92,7 +118,6 @@ public class ListDemo {
     List<Integer> lst = Arrays.asList(1,2,3,4);
     Collections.reverse(lst);
     System.out.println(lst.toString());
-
 
     List<List<Integer>> lstOfLst = new ArrayList<>();
     lstOfLst.add(Arrays.asList(1,2,3));

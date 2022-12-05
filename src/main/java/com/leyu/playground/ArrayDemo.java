@@ -5,6 +5,14 @@ import java.util.stream.Collectors;
 
 public class ArrayDemo {
 
+  public static void fill() {
+    int[] arr = new int[10];
+    Arrays.fill(arr, Integer.MAX_VALUE);
+    System.out.println(Arrays.toString(arr));
+    Arrays.fill(arr, -1);
+    System.out.println(Arrays.toString(arr));
+  }
+
   public static void indexOf() {
     int[] arr = {1, 2, 3, 4, 5};
     int idx = Arrays.stream(arr).boxed().toList().indexOf(3);
@@ -83,6 +91,39 @@ public class ArrayDemo {
     System.out.println("asc sort (natural order) by the first element");
     System.out.println("desc sort by the second element");
     System.out.println(Arrays.deepToString(arr));
+  }
+
+  public static void arraySortWithMethod() {
+    String line = "----------------------------------------------";
+    int[][] arr = {{1,4}, {0,3}, {1,3}, {0,2}};
+    System.out.println(Arrays.deepToString(arr));
+    System.out.println(line);
+
+    Arrays.sort(arr, ArrayDemo::comparator);
+
+    System.out.println(Arrays.deepToString(arr));
+    System.out.println(line);
+  }
+
+  private static int comparator(int[] a, int[] b) {
+    return a[0] - b[1];
+  }
+
+  public static void arraySortWithMethodCharVersion() {
+    String line = "----------------------------------------------";
+    Character[] arr = {'a','b', 'c'};
+    System.out.println(Arrays.toString(arr));
+    System.out.println(line);
+
+    Arrays.sort(arr, ArrayDemo::comparatorForChar);  // if it is char[], it cannot use the lambda...
+
+    System.out.println(Arrays.toString(arr));
+    System.out.println(line);
+  }
+
+
+  private static int comparatorForChar(char a, char b) {
+    return a - b;
   }
 
   public static void arraySortWithComparator() {

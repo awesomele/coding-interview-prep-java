@@ -3,6 +3,15 @@ package com.leyu.playground;
 import java.util.Map;
 
 public class IntegerDemo {
+  public static void convertDoubleToInt() {
+    double d = 0.1;
+    int a = (int)d;
+
+    Double doubleNumber = 0.1;
+    int i1 = doubleNumber.intValue();
+    Integer i2 = doubleNumber.intValue();
+  }
+
   public static void charCastToInt() {
     int a = 'a';
     int z = 'z';
@@ -29,6 +38,10 @@ public class IntegerDemo {
     System.out.println("Integer.MAX_VALUE: " + Integer.MAX_VALUE);
     System.out.println("Long.MAX_VALUE: " + Long.MAX_VALUE);
     System.out.println("Double.MAX_VALUE: " + Double.MAX_VALUE);
+
+//    var magicNumber = 1e9 + 7;
+    var magicNumber = Math.pow(10, 9) + 7;
+    System.out.println("1e9 + 7: " +magicNumber);
   }
 
   public static void convertIntToLong() {

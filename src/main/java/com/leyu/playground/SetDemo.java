@@ -21,6 +21,18 @@ public class SetDemo {
 
   }
 
+  public static void removeValueFromSet() {
+    Set<Integer> values = new HashSet<>();
+    values.addAll(List.of(1,2,3));
+    System.out.println("values = " + values);
+    System.out.println("remove 2");
+    values.remove(2);
+    System.out.println("values = " + values);
+    System.out.println("remove 5");
+    values.remove(5);
+    System.out.println("values = " + values);
+  }
+
   public static void toList() {
     Set<Integer> values = new HashSet<>();
     values.addAll(List.of(1,2,3));

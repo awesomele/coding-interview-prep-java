@@ -1,9 +1,6 @@
 package com.leyu.playground;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class QueueDemo {
 
@@ -11,6 +8,8 @@ public class QueueDemo {
     Queue<Integer> q = new LinkedList<>();
     q.add(1);
     q.poll();
+    int[] arr = new int[] {2,3};
+    q.addAll(Arrays.stream(arr).boxed().toList());
   }
 
   List<Object> strings = new ArrayList();

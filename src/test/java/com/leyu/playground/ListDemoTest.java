@@ -4,6 +4,11 @@ import org.junit.jupiter.api.Test;
 
 public class ListDemoTest {
   @Test
+  public void testListToArray() {
+    ListDemo.listToArray();
+  }
+
+  @Test
   public void testReferenceIsPassedByValue() {
     ListDemo.referenceIsPassedByValue();
   }

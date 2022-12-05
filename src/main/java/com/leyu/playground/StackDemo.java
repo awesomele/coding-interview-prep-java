@@ -12,5 +12,7 @@ public class StackDemo {
     while (!stack.empty()) {
       System.out.println(stack.pop());
     }
+
+    stack.clear();
   }
 }
